@@ -15,5 +15,13 @@ public class test {
     public static void main(String[] args) {
         System.out.println(Integer.toBinaryString(-8&0xff));
         System.out.println(Integer.toBinaryString(-8));
+
+        String str = "\"123\"";
+        System.out.println(str);
+        char c = str.charAt(str.length() - 1);
+        System.out.println(c == '\"');
+        int length = str.length();
+        str=str.replace(str.charAt(str.length()-1)+"","\"");
+        System.out.println(str);
     }
 }
