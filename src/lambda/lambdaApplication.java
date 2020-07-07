@@ -75,6 +75,5 @@ public class lambdaApplication {
         long end1 = System.currentTimeMillis();
         System.out.println("总共花费："+(end1-start1));
 
-        System.out.println(result);
     }
 }
