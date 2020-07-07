@@ -1,6 +1,8 @@
 package lambda;
 
+import java.io.BufferedReader;
 
+//@FunctionalInterface 标注这个借口为函数式借口，通常函数接口只有一个抽象方法
 interface Supplier<T> {
     T get();
 }
@@ -10,6 +12,15 @@ class f1 implements Supplier{
     public Object get() {
         return "hello world!";
     }
+}
+
+// 函数式接口里面可以有多个抽象方法：编译检查的时候Object抽象方法不会做考虑的。
+@FunctionalInterface
+interface BufferedReaderProcessor{
+    String process(BufferedReader br);
+    int hashCode();
+    boolean equals(Object var1);
+    String toString();
 }
 
 public class lambdaTest{

@@ -1,5 +1,6 @@
 package test;
 
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +12,9 @@ import java.util.stream.Collectors;
  * @author: Cloud
  * @create: 2020/5/14 10:16:47
  */
+
+
+
 public class test {
 
     /**
@@ -47,6 +51,20 @@ public class test {
         int length = str.length();
         str=str.replace(str.charAt(str.length()-1)+"","\"");
         System.out.println(str);
+
+        new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("hello world");
+            }
+        };
+
+        Runnable runnable = () -> System.out.println("hello world");
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        List<String> words = Arrays.asList("a", "ab", "abc");
+
+
 
    }
 }
