@@ -62,8 +62,5 @@ public class stream {
 
         System.out.println("limit 的使用");
         list.stream().limit(2).forEach(System.out::println);
-
-        List<String> list1 = Arrays.asList("1", "2", "2", "4", "5");
-        list1.stream().distinct().forEach(System.out::println);
     }
 }
