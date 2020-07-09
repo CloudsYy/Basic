@@ -20,7 +20,6 @@ public class test {
     /**
      * String字符串转成List<Long>数据格式
      * String str = "1,2,3,4,5,6" -> List<Long> listLong [1,2,3,4,5,6];
-     *
      * @param strArr
      * @return
      */
@@ -35,7 +34,6 @@ public class test {
     // 注补码的一致性，并不需要关注十进制的数据，
     // 转成java的int的时候，对于原码，补码和反码需要去另外了解一下
     public static void main(String[] args) {
-
         String str1 = "123,456";
         List<Long> longList = stringToLongList(str1);
         Long a = longList.get(0);
@@ -62,8 +60,9 @@ public class test {
         Runnable runnable = () -> System.out.println("hello world");
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
-        List<String> words = Arrays.asList("a", "ab", "abc");
+        List<Integer> words = Arrays.asList(3, 4, 5);
 
+        numbers.stream().filter(d -> d == 2).forEach(System.out::println);
 
 
    }
