@@ -40,16 +40,14 @@ public class doubleLinkList<T> {
             } else if (index==0) {
                 this.pre = teamNode;
                 teamNode.tail = this;
+            } else {
+                int flag = 0;
+
             }
         }
 
-        public void add(int index, T data,node tail, node pre){
-            node teamNode = new node(data);
-            if (doubleLinkList.this.length++==index) { // 索引等于当前链表的长度，则表示尾进行尾插入
+        public void add(int index, T data){
 
-            } else {
-                this.tail.add(index,data,tail,pre);
-            }
         }
     }
 
@@ -73,9 +71,10 @@ public class doubleLinkList<T> {
                 this.head.add(index,data,this.head);
             } else if (index > 0 && index < this.length){
                 // 待实现，没怎么好思路
-
+                // 思想应该是这样子，根据序号，在原链表找到相对应的位置，找到位置后，该节点的
+                // 数据pre指向新的节点，新的节点的next指向该节点(也就是this), 该数据也就是this.next的节点指向该数据，
+                // 该数据的pre指向this.next
             }
-
         }
         this.length++;
     }
