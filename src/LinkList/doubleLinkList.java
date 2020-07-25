@@ -11,6 +11,8 @@ public class doubleLinkList<T> {
     private node tail;// 尾节点
     private int length; //  链表长度
 
+    public static int flag = 0;
+
     public doubleLinkList(){
         head = null;
         tail = head;
@@ -31,23 +33,42 @@ public class doubleLinkList<T> {
         private void add(int index, T data,node node){   // 尾插入
             node teamNode = new node(data);
             if (doubleLinkList.this.length==index) { // 索引等于当前链表的长度，则表示尾进行尾插入
-                if (this.tail==null) {
-                    this.tail = teamNode;
+                if (index==1) {
                     teamNode.pre = this;
-                } else if (index==0){ // 索引等于0，则表示尾进行头插入
-                    this.tail.add(index,data,this);
+                } else {
+                    if (this.tail==null) {
+                        this.tail = teamNode;
+                        teamNode.pre = this;
+                    } else if (index==0){ // 索引等于0，则表示尾进行头插入
+                        this.tail.add(index,data,this);
+                    }if (this.tail==null) {
+                        this.tail = teamNode;
+                        teamNode.pre = this;
+                    } else if (index==0){ // 索引等于0，则表示尾进行头插入
+                        this.tail.add(index,data,this);
+                    }
                 }
             } else if (index==0) {
                 this.pre = teamNode;
                 teamNode.tail = this;
-            } else {
-                int flag = 0;
-
             }
         }
 
+        // 序号插入链表
         public void add(int index, T data){
-
+            node teamNode = new node(data);
+            if (flag++==index){
+                // 当前节点指向新的节点
+                this.pre = teamNode;
+                // 新的节点指向当前节点
+                teamNode.tail = this;
+                // 当前节点的上一个节点指向新的节点
+                this.pre.tail = teamNode;
+                // 新的节点指向当前节点的上一个节点
+                teamNode.pre = this.pre;
+            } else {
+                this.tail.add(index,data);
+            }
         }
     }
 
@@ -74,6 +95,8 @@ public class doubleLinkList<T> {
                 // 思想应该是这样子，根据序号，在原链表找到相对应的位置，找到位置后，该节点的
                 // 数据pre指向新的节点，新的节点的next指向该节点(也就是this), 该数据也就是this.next的节点指向该数据，
                 // 该数据的pre指向this.next
+                flag = 0;
+                this.head.add(index,data);
             }
         }
         this.length++;
