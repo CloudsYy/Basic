@@ -1,8 +1,8 @@
 package test;
 
-import jdk.nashorn.internal.ir.annotations.Immutable;
-
+import com.google.common.collect.ImmutableMap;
 import java.util.*;
+
 
 /**
  * @program: Basic
@@ -47,7 +47,7 @@ public class ParameterTest {
         }
 
         // if-else 数组简化和map简化，switch简化
-
+        Map<String, String> map = ImmutableMap.<String, String>builder().put("key","123").put("key1","456").build();
 
     }
 }
