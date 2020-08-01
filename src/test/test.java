@@ -1,7 +1,5 @@
 package test;
 
-import java.io.BufferedReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,9 +10,6 @@ import java.util.stream.Collectors;
  * @author: Cloud
  * @create: 2020/5/14 10:16:47
  */
-
-
-
 public class test {
 
     /**
@@ -63,7 +58,5 @@ public class test {
         List<Integer> words = Arrays.asList(3, 4, 5);
 
         numbers.stream().filter(d -> d == 2).forEach(System.out::println);
-
-
    }
 }
