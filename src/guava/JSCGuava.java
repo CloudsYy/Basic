@@ -4,7 +4,6 @@ import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.*;
-import com.google.common.collect.Sets.SetView;
 import java.util.*;
 
 /**
@@ -38,12 +37,12 @@ public class JSCGuava {
         HashSet<String> objects = Sets.newHashSet();
         Map<Object, Object> map = Maps.newHashMap();
 
-        // 不变Collection
         /*
         * 在多线程操作下，是线程安全的
           所有不可变集合会比可变集合更有效的利用资源
           中途不可改变
         * */
+        // 不变Collection
         ImmutableList immutableList = ImmutableList.of("a","b","c");
         ImmutableSet immutableSet = ImmutableSet.of("a","b","c");
         ImmutableMap<String,String> iMap = ImmutableMap.of("a","b","c","d");
@@ -154,8 +153,5 @@ public class JSCGuava {
         System.out.println(map02);
         System.out.println(map03);
         System.out.println(map04);
-
-
-
     }
 }

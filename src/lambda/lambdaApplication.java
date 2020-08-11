@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
 /**
  * @program: Basic
  * @description: lambda表示的应用场景，前面我们只是列过一种
+ *                   表达式虽然简单，但在lambda表达式
+ *                    中捕获异常也是需要优化的问题。
  * @author: Cloud
  * @create: 2020/7/7 09:16:53
  */

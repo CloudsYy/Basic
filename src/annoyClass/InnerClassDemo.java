@@ -16,7 +16,7 @@ class Z{
         this.fun2(new C() {
             @Override
             public void printInfo(int a,int b) {
-                System.out.println("这里是非匿名内部类 "+a+b);
+                System.out.println("这里是匿名内部类 "+a+b);
             }
         });
     }
