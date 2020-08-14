@@ -1,9 +1,6 @@
 package com.cloud.basic.Enum;
 
 
-import Enum.Food.Coffee;
-import Enum.Food.Rabbit;
-
 /**
  * @program: Basic
  * @description: 枚举
@@ -15,7 +12,6 @@ public class EnumTest {
     public static void main(String[] args) {
         String color = Color.BLACK.toString();
         System.out.println(color);
-
 
         Color red = Color.RED;
         switch (red){
@@ -39,15 +35,15 @@ public class EnumTest {
         // 枚举实现接口
         System.out.println(MyDay.THUSDAY.getDay());
 
-        for (Rabbit rabbit : Food.Rabbit.values()) {
+        for (Food.Rabbit rabbit : Food.Rabbit.values()) {
             System.out.println(rabbit);
         }
 
         // 多态
         System.out.println("多态体现：");
-        Food food = Rabbit.BLACK_CARROT;
+        Food food = Food.Rabbit.BLACK_CARROT;
         System.out.println(food);
-        Food food1 = Coffee.BLACK_COFFEE;
+        Food food1 = Food.Coffee.BLACK_COFFEE;
         System.out.println(food1);
 
         // 同时，枚举类型对象之间的值比较，是可以使用==，直接来比较值，是否相等的，不是必须使用equals方法的
