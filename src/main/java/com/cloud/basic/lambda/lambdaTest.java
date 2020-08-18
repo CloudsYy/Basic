@@ -2,7 +2,7 @@ package com.cloud.basic.lambda;
 
 import java.io.BufferedReader;
 
-//@FunctionalInterface 标注这个借口为函数式借口，通常函数接口只有一个抽象方法
+//@FunctionalInterface 标注这个接口为函数式接口，通常函数接口只有一个抽象方法
 interface Supplier<T> {
     T get();
 }
