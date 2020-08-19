@@ -3,6 +3,9 @@ package com.cloud.basic.LinkList;
 /**
  * @program: Basic
  * @description: 双链表
+ *               双向链表的是从下一个节点反向指向上一个节点
+ *               及头指针指向上一个节点，尾指针指向下一个节点
+ *               环是从尾节点指向下一个最前端。
  * @author: Cloud
  * @create: 2020/7/23 10:12:53
  */
@@ -58,7 +61,7 @@ public class doubleLinkList<T> {
         public void add(int index, T data){
             node teamNode = new node(data);
             if (flag++==index){
-                // 当前节点指向新的节点
+                // 当前尾指针指向新的节点
                 this.pre = teamNode;
                 // 新的节点指向当前节点
                 teamNode.tail = this;
