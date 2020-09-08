@@ -1,7 +1,6 @@
-package com.cloud.basic;
+package com.cloud.basic.redis;
 
 import redis.clients.jedis.Jedis;
-
 import java.io.InputStream;
 import java.util.Properties;
 

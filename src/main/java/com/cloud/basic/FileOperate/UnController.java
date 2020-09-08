@@ -27,6 +27,8 @@ public class UnController {
     @GetMapping("getColumns")
     public List<String> getColumns(){
         // 指定数据库中的所有表名(有大小写下划线)
+        String str = "序号 = ?";
+        System.out.println(str.replaceAll("[?]",""));
         List<String> colunms = unDao.getColunms();
         List<String> list = new ArrayList<>();
         colunms.forEach(x->list.add(x.replaceAll("_","").toUpperCase()));
