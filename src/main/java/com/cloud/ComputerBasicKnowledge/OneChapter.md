@@ -11,11 +11,11 @@
         
 短除法，该方法通常用于高进制转低进制使用
 
-![](../image/1.jpg)
+![](https://github.com/CloudsYy/Basic/tree/master/src/main/java/com/cloud/image/1.jpg)
 
 另外，二进制转八进制与十六进制数有其他方法，如下图：
 
-![](../image/2.jpg)
+![](https://github.com/CloudsYy/Basic/tree/master/src/main/java/com/cloud/image/2.jpg)
 **说明：**
 每三位为一个十进制数
 
@@ -31,7 +31,7 @@
     01010，可以得到二进制数为1010
     
 ##### 原码反码补码移码
-![](../image/1600011291.jpg)
+![](https://github.com/CloudsYy/Basic/tree/master/src/main/java/com/cloud/image/1600011291.jpg)
 
     对于这个图，唯一想解释的点，就这个移码：
     就是首位取反，缘由为用补码表示阶码的时候，当阶码无限小，产生了下溢的时候，阶码变成了0，那么这个浮点数的值变为了1。
@@ -49,7 +49,7 @@
     增加尾数位数可提高数据精度，增加阶码位数能增大表示的数据区域
 
 #### 数值取值范围
-![](../image/1600012589.jpg)
+![](https://github.com/CloudsYy/Basic/tree/master/src/main/java/com/cloud/image/1600012589.jpg)
     
     如：一个字节用8个bit位表示，则
     原码取值范围为:
@@ -91,7 +91,7 @@
          补码：8位补码能够表示数的范围是 -128~127。
     
          （在补码中用(-128)代替了(-0)，所以补码的表示范围为：(-128~0~127)共256个
-![](../image/20180919205255221.png)
+![](https://github.com/CloudsYy/Basic/tree/master/src/main/java/com/cloud/image/20180919205255221.png)
     
     
     
